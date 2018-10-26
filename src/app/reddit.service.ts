@@ -28,9 +28,14 @@ export class RedditService {
 
   public getPosts(): Observable<any> {
     // return this.http.get("https://oauth.reddit.com/hot", this.getHttpOptions());
+
     return Observable.create((ob) => {
       ob.next(TEST_DATA);
     })
+
+    /*return Observable.create((ob) => {
+      ob.next({data: []});
+    });*/
   }
 
   constructor(

@@ -1,11 +1,15 @@
 <div id="mySidenav" class="sidenav">
   <div *ngFor="let post of posts; let odd=odd; let even=even;" class="row" [ngClass]="{ odd: odd, even: even }
 ">
-    <span class="subname">{{post.data.subreddit_name_prefixed}}</span>
     <div class="textcontainer">
-      <span class="points">{{formatScore(post.data.ups)}}</span>
-      <span class="title">{{post.data.title}}</span>
-      <img src={{post.data.thumbnail}} />
+      <span class="subname">{{post.data.subreddit_name_prefixed}}</span>
+      <div class="container2">
+        <div [ngStyle]="{'background': this.utils.upvoteToColor(post.data.ups)}">
+          <span class="points">{{formatScore(post.data.ups)}}</span>
+        </div>
+        <span class="title">{{post.data.title}}</span>
+      </div>
     </div>
+    <img *ngIf="post.data.thumbnail !== 'self'" src={{getThumbnailUrl(post)}} />
   </div>
 </div>

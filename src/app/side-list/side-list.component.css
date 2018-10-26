@@ -12,7 +12,8 @@
 
 .row {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 .even {
@@ -26,27 +27,27 @@
 
 .textcontainer {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
 }
 
 img {
-    width: 5vw;
+    width: 4vw;
     align-self: center;
 }
 
-.title {
-    width: 17vw;
+.container2 {
+    height: 100%;
     display: flex;
-    justify-content: center;
-    flex-direction: column;
-    padding: 5px;
+    align-items: center;
+    width: 20vw;
 }
 
-.points {
+.title {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    text-align: center;
-    width: 3vw;
+    margin-left: 10px;
+}
+.points {
     font-weight: bold;
 }

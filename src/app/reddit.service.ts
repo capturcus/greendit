@@ -5,7 +5,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { GoogleService } from './google.service';
 import { Observable } from 'rxjs';
 
-import {TEST_DATA} from '../testdata';
+import { TEST_DATA } from '../testdata';
 
 // http://localhost:4200/callback?state=12c0ef1f-1c86-4321-8ee0-249585ff5ae9&code=REZUZJ52vHaPyKnmZZa0--4NcMI
 
@@ -72,6 +72,8 @@ export class RedditService {
       xhr.setRequestHeader('Content-type', "application/x-www-form-urlencoded");
       xhr.send("grant_type=authorization_code&code=" + urlValues["code"] + "&redirect_uri=" + REDIRECT_URI);
       return;
+    } else {
+      this.login();
     }
   }
 

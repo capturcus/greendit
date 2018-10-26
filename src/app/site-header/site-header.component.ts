@@ -15,4 +15,10 @@ export class SiteHeaderComponent implements OnInit {
   ) { }
 
   ngOnInit() {}
+
+  tryReddit() {
+    if(this.reddit.login()) {
+      this.google.signInIfNecessary();
+    }
+  }
 }

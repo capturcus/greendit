@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { RedditService } from '../reddit.service';
+import { UtilsService } from '../utils.service';
 
 @Component({
   selector: 'app-side-list',
@@ -11,7 +12,8 @@ export class SideListComponent implements OnInit {
   posts;
 
   constructor(
-    private reddit: RedditService
+    private reddit: RedditService,
+    private utils: UtilsService
   ) { }
 
   ngOnInit() {
@@ -27,5 +29,12 @@ export class SideListComponent implements OnInit {
       return (s/1000).toFixed(1)+"k";
     }
     return score;
+  }
+
+  getThumbnailUrl(post) {
+    if (post.data.thumbnail === "image") {
+      return post.data.url;
+    }
+    return post.data.thumbnail;
   }
 }

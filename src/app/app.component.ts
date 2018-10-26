@@ -17,15 +17,5 @@ export class AppComponent {
 
   ngOnInit() {
     this.reddit.init();
-
-    if(this.reddit.login()) {
-      this.google.signInIfNecessary();
-    }
-  }
-
-  tryReddit() {
-    if(this.reddit.login()) {
-      this.google.signInIfNecessary();
-    }
   }
 }

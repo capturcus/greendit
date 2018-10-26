@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UtilsService } from '../utils.service';
 
 @Component({
   selector: 'app-main-view',
@@ -8,10 +9,13 @@ import { Component, OnInit } from '@angular/core';
 export class MainViewComponent implements OnInit {
 
   slider: number;
+  siemka;
+  color = "green";
 
-  constructor() { }
+  constructor(
+    private utils: UtilsService
+  ) { }
 
   ngOnInit() {
   }
-
 }

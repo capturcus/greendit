@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { RedditService } from './reddit.service';
+import { GoogleService } from './google.service';
 
 @Component({
   selector: 'app-root',
@@ -10,12 +11,21 @@ export class AppComponent {
   title = 'greendit';
 
   constructor(
-    private reddit: RedditService
-  ) {
-
-  }
+    private reddit: RedditService,
+    private google: GoogleService
+  ) {}
 
   ngOnInit() {
     this.reddit.init();
+
+    if(this.reddit.login()) {
+      this.google.signInIfNecessary();
+    }
+  }
+
+  tryReddit() {
+    if(this.reddit.login()) {
+      this.google.signInIfNecessary();
+    }
   }
 }

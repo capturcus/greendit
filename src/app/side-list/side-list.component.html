@@ -1,6 +1,11 @@
 <div id="mySidenav" class="sidenav">
-  <a href="#">About</a>
-  <a href="#">Services</a>
-  <a href="#">Clients</a>
-  <a href="#">Contact</a>
+  <div *ngFor="let post of posts; let odd=odd; let even=even;" class="row" [ngClass]="{ odd: odd, even: even }
+">
+    <span class="subname">{{post.data.subreddit_name_prefixed}}</span>
+    <div class="textcontainer">
+      <span class="points">{{formatScore(post.data.ups)}}</span>
+      <span class="title">{{post.data.title}}</span>
+      <img src={{post.data.thumbnail}} />
+    </div>
+  </div>
 </div>

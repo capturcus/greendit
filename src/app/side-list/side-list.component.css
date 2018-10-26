@@ -1,11 +1,52 @@
 .sidenav {
     height: 100%;
-    width: 20vw;
+    width: 25vw;
     position: fixed;
     z-index: 1;
-    top: 0;
     left: 0;
     display: flex;
     flex-direction: column;
     background: #eff7ed;
+    overflow-y: scroll;
+}
+
+.row {
+    display: flex;
+    flex-direction: column;
+}
+
+.even {
+    background: white;
+}
+
+.subname {
+    font-weight: bold;
+    text-align: left;
+}
+
+.textcontainer {
+    display: flex;
+    flex-direction: row;
+}
+
+img {
+    width: 5vw;
+    align-self: center;
+}
+
+.title {
+    width: 17vw;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 5px;
+}
+
+.points {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    width: 3vw;
+    font-weight: bold;
 }

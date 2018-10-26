@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { RedditService } from '../reddit.service';
+import { GoogleService } from '../google.service';
 
 @Component({
   selector: 'app-site-header',
@@ -9,13 +10,9 @@ import { RedditService } from '../reddit.service';
 export class SiteHeaderComponent implements OnInit {
 
   constructor(
-    private reddit: RedditService
+    private reddit: RedditService,
+    private google: GoogleService
   ) { }
 
-  ngOnInit() {
-  }
-
-  tryReddit() {
-    this.reddit.login();
-  }
+  ngOnInit() {}
 }

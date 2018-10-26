@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainViewComponent implements OnInit {
 
+  slider: number;
+
   constructor() { }
 
   ngOnInit() {

@@ -1,6 +1,6 @@
 <div id="mySidenav" class="sidenav">
-  <div *ngFor="let post of posts; let odd=odd; let even=even;" class="row" [ngClass]="{ odd: odd, even: even }
-">
+  <div *ngFor="let post of posts; let index=index; let odd=odd; let even=even;" class="row" [ngClass]="{ odd: odd, even: even, selected: index===selectedPost }
+" (click)="selectPost(index)">
     <div class="textcontainer">
       <span class="subname">{{post.data.subreddit_name_prefixed}}</span>
       <div class="container2">

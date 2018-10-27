@@ -1,6 +1,5 @@
-<input [(ngModel)]="slider" type="range" min="1" max="50000" value="50" />
-{{this.utils.upvoteToColor(slider)}}
-<br />
-<div [ngStyle]="{'background': this.utils.upvoteToColor(slider)}">
-{{slider}}
-</div>
+<img *ngIf="isImage(post)" src="{{post.data.url}}" />
+<!--<video *ngIf="isVideo(post)" src="{{post.data.url}}" ></video>-->
+<video *ngIf="isVideo(post)" preload="auto" autoplay="autoplay" loop="loop">
+    <source src="{{post.data.url}}" type="video/mp4" />
+</video>

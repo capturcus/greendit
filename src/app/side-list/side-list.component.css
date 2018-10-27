@@ -20,6 +20,10 @@
     background: white;
 }
 
+.selected {
+    background: #dddddd;
+}
+
 .subname {
     font-weight: bold;
     text-align: left;

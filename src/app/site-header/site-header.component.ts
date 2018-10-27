@@ -9,6 +9,8 @@ import { GoogleService } from '../google.service';
 })
 export class SiteHeaderComponent implements OnInit {
 
+  post;
+
   constructor(
     private reddit: RedditService,
     private google: GoogleService
@@ -20,5 +22,9 @@ export class SiteHeaderComponent implements OnInit {
     if(this.reddit.login()) {
       this.google.signInIfNecessary();
     }
+  }
+
+  public setupPost(incomingPost) {
+    this.post = incomingPost;
   }
 }

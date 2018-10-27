@@ -9,7 +9,6 @@ export class UtilsService {
 
   public colorLerp(max: number, val: number) {
     let quarter = max / 4;
-    console.log(val);
     if (val < (max * 0.25)) {
       // b -> bg
       return { r: 0, g: 255 * (val / quarter), b: 255 }

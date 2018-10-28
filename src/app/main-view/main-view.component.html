@@ -1,5 +1,12 @@
-<img class="maincontent" *ngIf="post !== undefined && isImage(post)" src="{{post.data.url}}" />
-<!--<video *ngIf="isVideo(post)" src="{{post.data.url}}" ></video>-->
-<video class="maincontent" *ngIf="post !== undefined && isVideo(post)" preload="auto" autoplay="autoplay" loop="loop" #player>
-    <source [src]="getVideoSrc(post)" type="{{getVideoType(post)}}" />
+<div class="maincontainer">
+<!-- <span class="sub">r/{{post.data.subreddit}}</span> -->
+<span (click)=titleClick() [ngClass]="{'title':true, 'link': isLink()}">{{post.data.title}}</span>
+<img class="maincontent" *ngIf="post !== undefined && isImage()" src="{{post.data.url}}" />
+<!--<video *ngIf="isVideo()" src="{{post.data.url}}" ></video>-->
+<video class="maincontent" *ngIf="post !== undefined && isVideo()" preload="auto" autoplay="autoplay" loop="loop" #player controls>
+    <source [src]="getVideoSrc()" type="{{getVideoType()}}" />
 </video>
+<span *ngIf="post !== undefined && isSelftext() && post.data.selftext !== ''" class="maincontent selftext">{{post.data.selftext}}</span>
+</div>
+
+<app-comments></app-comments>

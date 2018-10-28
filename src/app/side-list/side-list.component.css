@@ -6,7 +6,7 @@
     left: 0;
     display: flex;
     flex-direction: column;
-    background: #eff7ed;
+    /* background: #eff7ed; */
     overflow-y: scroll;
 }
 

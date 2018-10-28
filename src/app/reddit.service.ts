@@ -34,7 +34,7 @@ export class RedditService {
   }
 
   public getPosts(): Observable<any> {
-    return Observable.create((observer) => {
+    /*return Observable.create((observer) => {
       let link = "https://oauth.reddit.com/hot";
       if (this.after !== undefined) {
         link += "?after=" + this.after;
@@ -45,11 +45,11 @@ export class RedditService {
         console.log(this.after);
         observer.next(data.body);
       })
-    });
+    });*/
 
-    /*return Observable.create((ob) => {
+    return Observable.create((ob) => {
       ob.next(TEST_DATA);
-    })*/
+    })
 
     /*return Observable.create((ob) => {
       ob.next({data: []});

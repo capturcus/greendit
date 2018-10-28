@@ -65,7 +65,7 @@ export class MainViewComponent implements OnInit {
   }
 
   ngAfterViewChecked() {
-    if (this.isVideo(this.post)) {
+    if (this.post !== undefined && this.isVideo(this.post)) {
       this.player.nativeElement.load();
     }
   }

@@ -17,21 +17,39 @@ const BASIC_AUTH = "Basic Wl9BZzNybS1FVWoxX3c6Zm9LVHU0Y3VoV2RKV2dKSXhLN3hON0pBUW
 })
 export class RedditService {
 
+  after: string;
+
+  public getBasicAuth() {
+    return BASIC_AUTH;
+  }
+
   public getHttpOptions() {
     let token = localStorage.getItem("reddit_access_token");
     return {
       headers: new HttpHeaders({
         Authorization: "bearer " + token
-      })
+      }),
+      observe: 'response' as 'response'
     }
   }
 
   public getPosts(): Observable<any> {
-    // return this.http.get("https://oauth.reddit.com/hot", this.getHttpOptions());
+    return Observable.create((observer) => {
+      let link = "https://oauth.reddit.com/hot";
+      if (this.after !== undefined) {
+        link += "?after=" + this.after;
+      }
+      this.http.get(link, this.getHttpOptions()).subscribe((data) => {
+        console.log("DATA", data);
+        this.after = data.body['data'].after;
+        console.log(this.after);
+        observer.next(data.body);
+      })
+    });
 
-    return Observable.create((ob) => {
+    /*return Observable.create((ob) => {
       ob.next(TEST_DATA);
-    })
+    })*/
 
     /*return Observable.create((ob) => {
       ob.next({data: []});

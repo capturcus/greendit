@@ -9,7 +9,7 @@ import { GoogleService } from '../google.service';
 })
 export class SiteHeaderComponent implements OnInit {
 
-  post;
+  post = {data:{}};
 
   constructor(
     private reddit: RedditService,
@@ -19,6 +19,7 @@ export class SiteHeaderComponent implements OnInit {
   ngOnInit() {}
 
   tryReddit() {
+    console.log("logging in to reddit");
     if(this.reddit.login()) {
       this.google.signInIfNecessary();
     }

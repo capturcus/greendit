@@ -1,7 +1,7 @@
 <div class="maincontainer">
 <!-- <span class="sub">r/{{post.data.subreddit}}</span> -->
 <span (click)=titleClick() [ngClass]="{'title':true, 'link': isLink()}">{{post.data.title}}</span>
-<img class="maincontent" *ngIf="post !== undefined && isImage()" src="{{post.data.url}}" />
+<img class="maincontent mainimage" *ngIf="post !== undefined && isImage()" src="{{post.data.url}}" />
 <!--<video *ngIf="isVideo()" src="{{post.data.url}}" ></video>-->
 <video class="maincontent" *ngIf="post !== undefined && isVideo()" preload="auto" autoplay="autoplay" loop="loop" #player controls>
     <source [src]="getVideoSrc()" type="{{getVideoType()}}" />

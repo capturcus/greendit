@@ -12,6 +12,8 @@ import { TEST_DATA } from '../testdata';
 const REDIRECT_URI = "http://localhost:4200/callback";
 const BASIC_AUTH = "Basic Wl9BZzNybS1FVWoxX3c6Zm9LVHU0Y3VoV2RKV2dKSXhLN3hON0pBUWlV";
 
+const SERVE_TEST_DATA = false;
+
 @Injectable({
   providedIn: 'root'
 })
@@ -34,7 +36,14 @@ export class RedditService {
   }
 
   public getPosts(): Observable<any> {
-    /*return Observable.create((observer) => {
+    
+    if (SERVE_TEST_DATA) {
+      return Observable.create((ob) => {
+        ob.next(TEST_DATA);
+      });
+    }
+
+    return Observable.create((observer) => {
       let link = "https://oauth.reddit.com/hot";
       if (this.after !== undefined) {
         link += "?after=" + this.after;
@@ -45,11 +54,7 @@ export class RedditService {
         console.log(this.after);
         observer.next(data.body);
       })
-    });*/
-
-    return Observable.create((ob) => {
-      ob.next(TEST_DATA);
-    })
+    });
 
     /*return Observable.create((ob) => {
       ob.next({data: []});

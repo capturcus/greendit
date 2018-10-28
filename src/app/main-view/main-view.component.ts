@@ -1,4 +1,4 @@
-import { Component, OnInit, Pipe, PipeTransform } from '@angular/core';
+import { Component, OnInit, Pipe, PipeTransform, ViewChild } from '@angular/core';
 import { UtilsService } from '../utils.service';
 
 const IMG_EXTENSIONS = [".png", ".jpg", ".gif"];
@@ -16,6 +16,8 @@ export class MainViewComponent implements OnInit {
   color = "green";
   post;
 
+  @ViewChild('player')
+  private player;
 
   constructor(
     private utils: UtilsService
@@ -44,5 +46,27 @@ export class MainViewComponent implements OnInit {
       }
     }
     return false;
+  }
+
+  getVideoSrc(post) {
+    if (post.data.domain === "i.imgur.com") {
+      let arr = post.data.url.split(".");
+      arr.splice(-1);
+      let directLink = arr.join(".") + ".mp4";
+      return directLink;
+    }
+    console.log(post.data.domain);
+  }
+
+  getVideoType(post) {
+    if (post.data.domain === "i.imgur.com") {
+      return "video/mp4";
+    }
+  }
+
+  ngAfterViewChecked() {
+    if (this.isVideo(this.post)) {
+      this.player.nativeElement.load();
+    }
   }
 }

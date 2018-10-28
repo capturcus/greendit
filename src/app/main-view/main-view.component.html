@@ -1,5 +1,5 @@
 <img *ngIf="isImage(post)" src="{{post.data.url}}" />
 <!--<video *ngIf="isVideo(post)" src="{{post.data.url}}" ></video>-->
-<video *ngIf="isVideo(post)" preload="auto" autoplay="autoplay" loop="loop">
-    <source src="{{post.data.url}}" type="video/mp4" />
+<video *ngIf="isVideo(post)" preload="auto" autoplay="autoplay" loop="loop" #player>
+    <source [src]="getVideoSrc(post)" type="{{getVideoType(post)}}" />
 </video>

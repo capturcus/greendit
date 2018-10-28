@@ -41,7 +41,7 @@ export class SideListComponent implements OnInit {
       return post.data.url;
     }
     if (post.data.thumbnail === "nsfw") {
-      return "/nsfw";
+      return "/assets/nsfw.png";
     }
     return post.data.thumbnail;
   }

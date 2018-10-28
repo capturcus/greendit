@@ -1,4 +1,4 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component, ViewChild, HostListener } from '@angular/core';
 import { RedditService } from './reddit.service';
 import { GoogleService } from './google.service';
 import { SideListComponent } from './side-list/side-list.component';
@@ -24,7 +24,7 @@ export class AppComponent {
   constructor(
     private reddit: RedditService,
     private google: GoogleService
-  ) {}
+  ) { }
 
   ngOnInit() {
     this.reddit.init();

@@ -272,7 +272,7 @@ export const TEST_DATA ={data: {children:[{
     "permalink": "/r/rarepuppers/comments/9rjl3o/doggo_is_boss/",
     "parent_whitelist_status": "all_ads",
     "stickied": false,
-    "url": "https://i.imgur.com/25CUMvf.mp4",
+    "url": "https://i.imgur.com/25CUMvf.gifv",
     "subreddit_subscribers": 972815,
     "created_utc": 1540550096,
     "media": null,

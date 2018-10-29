@@ -18,10 +18,12 @@ export class RequestInterceptor implements HttpInterceptor {
   }
 
   private renewAccessToken(): Observable<any> {
+    console.log("renewing access");
     return Observable.create((observer) => {
       let postLink = "https://www.reddit.com/api/v1/access_token";
       var xhr = new XMLHttpRequest();
       xhr.onreadystatechange = function () {
+        console.log("renew access request completed", xhr);
         var DONE = 4; // readyState 4 means the request is done.
         var OK = 200; // status 200 is a successful return.
         if (xhr.readyState === DONE) {
@@ -63,17 +65,5 @@ export class RequestInterceptor implements HttpInterceptor {
         }
         return of(error);
       }) as any);
-  }
-
-  private handleError(err: HttpErrorResponse): Observable<any> {
-    if (err.status === 401) {
-      if (err.url.includes("https://oauth.reddit.com")) {
-
-        // a reddit api call failed, refresh.
-
-      }
-      return of(err.message);
-    }
-    throw err;
   }
 }

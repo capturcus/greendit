@@ -2,61 +2,94 @@
   "kind": "t3",
   "data": {
     "approved_at_utc": null,
-    "subreddit": "funny",
+    "subreddit": "HighQualityGifs",
     "selftext": "",
-    "author_fullname": "t2_hztzi",
+    "author_fullname": "t2_12u87zc3",
     "saved": false,
     "mod_reason_title": null,
     "gilded": 0,
     "clicked": false,
-    "title": "Blue screen of death",
-    "link_flair_richtext": [],
-    "subreddit_name_prefixed": "r/funny",
+    "title": "Guys only want one thing",
+    "link_flair_richtext": [{
+      "e": "text",
+      "t": "It's Letterkenny, but you'll still ask /r/all"
+    }],
+    "subreddit_name_prefixed": "r/HighQualityGifs",
     "hidden": false,
     "pwls": 6,
-    "link_flair_css_class": null,
+    "link_flair_css_class": "all 001",
     "downs": 0,
-    "thumbnail_height": 140,
+    "thumbnail_height": 78,
     "hide_score": false,
-    "name": "t3_9rjbek",
+    "name": "t3_9s8m6m",
     "quarantine": false,
     "link_flair_text_color": "dark",
-    "author_flair_background_color": null,
+    "author_flair_background_color": "",
     "subreddit_type": "public",
-    "ups": 26326,
-    "domain": "i.redd.it",
-    "media_embed": {},
+    "ups": 5261,
+    "domain": "gfycat.com",
+    "media_embed": {
+      "content": "&lt;iframe class=\"embedly-embed\" src=\"https://cdn.embedly.com/widgets/media.html?src=https%3A%2F%2Fgfycat.com%2Fifr%2FAdoredPleasedAngwantibo&amp;url=https%3A%2F%2Fgfycat.com%2Fadoredpleasedangwantibo&amp;image=https%3A%2F%2Fthumbs.gfycat.com%2FAdoredPleasedAngwantibo-size_restricted.gif&amp;key=ed8fa8699ce04833838e66ce79ba05f1&amp;type=text%2Fhtml&amp;schema=gfycat\" width=\"600\" height=\"337\" scrolling=\"no\" frameborder=\"0\" allow=\"autoplay; fullscreen\" allowfullscreen=\"true\"&gt;&lt;/iframe&gt;",
+      "width": 600,
+      "scrolling": false,
+      "height": 337
+    },
     "thumbnail_width": 140,
-    "author_flair_template_id": null,
+    "author_flair_template_id": "3ae8a9b4-9d92-11e3-a135-12313b0c91be",
     "is_original_content": false,
     "user_reports": [],
-    "secure_media": null,
-    "is_reddit_media_domain": true,
+    "secure_media": {
+      "oembed": {
+        "provider_url": "http://gfycat.com",
+        "description": "Watch Final GIF by rooneygifs on Gfycat. Discover more related GIFs on Gfycat",
+        "title": "Final - Create, Discover and Share Awesome GIFs on Gfycat",
+        "type": "video",
+        "thumbnail_width": 445,
+        "height": 337,
+        "width": 600,
+        "html": "&lt;iframe class=\"embedly-embed\" src=\"https://cdn.embedly.com/widgets/media.html?src=https%3A%2F%2Fgfycat.com%2Fifr%2FAdoredPleasedAngwantibo&amp;url=https%3A%2F%2Fgfycat.com%2Fadoredpleasedangwantibo&amp;image=https%3A%2F%2Fthumbs.gfycat.com%2FAdoredPleasedAngwantibo-size_restricted.gif&amp;key=ed8fa8699ce04833838e66ce79ba05f1&amp;type=text%2Fhtml&amp;schema=gfycat\" width=\"600\" height=\"337\" scrolling=\"no\" frameborder=\"0\" allow=\"autoplay; fullscreen\" allowfullscreen=\"true\"&gt;&lt;/iframe&gt;",
+        "version": "1.0",
+        "provider_name": "gfycat",
+        "thumbnail_url": "https://thumbs.gfycat.com/AdoredPleasedAngwantibo-size_restricted.gif",
+        "thumbnail_height": 250
+      },
+      "type": "gfycat.com"
+    },
+    "is_reddit_media_domain": false,
     "is_meta": false,
     "category": null,
-    "secure_media_embed": {},
-    "link_flair_text": null,
+    "secure_media_embed": {
+      "content": "&lt;iframe class=\"embedly-embed\" src=\"https://cdn.embedly.com/widgets/media.html?src=https%3A%2F%2Fgfycat.com%2Fifr%2FAdoredPleasedAngwantibo&amp;url=https%3A%2F%2Fgfycat.com%2Fadoredpleasedangwantibo&amp;image=https%3A%2F%2Fthumbs.gfycat.com%2FAdoredPleasedAngwantibo-size_restricted.gif&amp;key=ed8fa8699ce04833838e66ce79ba05f1&amp;type=text%2Fhtml&amp;schema=gfycat\" width=\"600\" height=\"337\" scrolling=\"no\" frameborder=\"0\" allow=\"autoplay; fullscreen\" allowfullscreen=\"true\"&gt;&lt;/iframe&gt;",
+      "width": 600,
+      "scrolling": false,
+      "media_domain_url": "https://www.redditmedia.com/mediaembed/9s8m6m",
+      "height": 337
+    },
+    "link_flair_text": "It's Letterkenny, but you'll still ask /r/all",
     "can_mod_post": false,
-    "score": 26326,
+    "score": 5261,
     "approved_by": null,
-    "thumbnail": "https://a.thumbs.redditmedia.com/vdt4GJU9dfd3h0TGPCGqi7ncsQeKnDz2WEkejw1XhM4.jpg",
+    "thumbnail": "https://a.thumbs.redditmedia.com/YfdGc8hFG3DsLmg-finq8G1FqEM4tzJ0s5d_6-T3c_0.jpg",
     "edited": false,
-    "author_flair_css_class": null,
-    "author_flair_richtext": [],
+    "author_flair_css_class": "001-005",
+    "author_flair_richtext": [{
+      "e": "text",
+      "t": "Photoshop - Gimp"
+    }],
     "gildings": {
       "gid_1": 0,
       "gid_2": 0,
       "gid_3": 0
     },
-    "post_hint": "image",
+    "post_hint": "rich:video",
     "content_categories": null,
     "is_self": false,
     "mod_note": null,
-    "created": 1540575979,
-    "link_flair_type": "text",
+    "created": 1540803926,
+    "link_flair_type": "richtext",
     "wls": 6,
     "banned_by": null,
-    "author_flair_type": "text",
+    "author_flair_type": "richtext",
     "contest_mode": false,
     "selftext_html": null,
     "likes": null,
@@ -71,30 +104,78 @@
     "preview": {
       "images": [{
         "source": {
-          "url": "https://preview.redd.it/gvq357z64iu11.jpg?auto=webp&amp;s=7b4fd09bec2d2a3dd081451bf0028eee9d226dd5",
-          "width": 660,
-          "height": 795
+          "url": "https://external-preview.redd.it/BIxclL-0oN1T34zEimLBRqVrFB2ssklkfQLEN2PPtvc.gif?format=png8&amp;s=e59826ec2d88a139c37da4edf15a3c19a888b1d0",
+          "width": 445,
+          "height": 250
         },
         "resolutions": [{
-          "url": "https://preview.redd.it/gvq357z64iu11.jpg?width=108&amp;crop=smart&amp;auto=webp&amp;s=a59b9252326c37c94c6ac0f6b7a7dee5b7d03f18",
+          "url": "https://external-preview.redd.it/BIxclL-0oN1T34zEimLBRqVrFB2ssklkfQLEN2PPtvc.gif?width=108&amp;crop=smart&amp;format=png8&amp;s=e0ec91d9b5c5dbc5d29ad0853526123f8274373c",
           "width": 108,
-          "height": 130
+          "height": 60
         }, {
-          "url": "https://preview.redd.it/gvq357z64iu11.jpg?width=216&amp;crop=smart&amp;auto=webp&amp;s=f9ca43d9a485d3554622698f6d3f1bb012444276",
+          "url": "https://external-preview.redd.it/BIxclL-0oN1T34zEimLBRqVrFB2ssklkfQLEN2PPtvc.gif?width=216&amp;crop=smart&amp;format=png8&amp;s=3a9485f35e78fbb386876a4b4003027486ad0125",
           "width": 216,
-          "height": 260
+          "height": 121
         }, {
-          "url": "https://preview.redd.it/gvq357z64iu11.jpg?width=320&amp;crop=smart&amp;auto=webp&amp;s=9e8070ecf14b727be7fe3544018c62f177ac5042",
+          "url": "https://external-preview.redd.it/BIxclL-0oN1T34zEimLBRqVrFB2ssklkfQLEN2PPtvc.gif?width=320&amp;crop=smart&amp;format=png8&amp;s=0a93e6bcf46653c818bb8aff6c26cd0adc5f41c9",
           "width": 320,
-          "height": 385
-        }, {
-          "url": "https://preview.redd.it/gvq357z64iu11.jpg?width=640&amp;crop=smart&amp;auto=webp&amp;s=5acbb313c95fce2e8c7e28a02118fbcf5afe054f",
-          "width": 640,
-          "height": 770
+          "height": 179
         }],
-        "variants": {},
-        "id": "oLXpc_GfG2tElKwFca8aUdrUwIFXPr8C_-DPXdcDKfM"
+        "variants": {
+          "gif": {
+            "source": {
+              "url": "https://external-preview.redd.it/BIxclL-0oN1T34zEimLBRqVrFB2ssklkfQLEN2PPtvc.gif?s=883bea967fb1d4d8a7f30a9daa9d3a62881940a0",
+              "width": 445,
+              "height": 250
+            },
+            "resolutions": [{
+              "url": "https://external-preview.redd.it/BIxclL-0oN1T34zEimLBRqVrFB2ssklkfQLEN2PPtvc.gif?width=108&amp;crop=smart&amp;s=d4bde492aed937cd03af10041fe133971975d9b0",
+              "width": 108,
+              "height": 60
+            }, {
+              "url": "https://external-preview.redd.it/BIxclL-0oN1T34zEimLBRqVrFB2ssklkfQLEN2PPtvc.gif?width=216&amp;crop=smart&amp;s=2400509e9a0cb951ec85b1070dc5c53b2aa025c2",
+              "width": 216,
+              "height": 121
+            }, {
+              "url": "https://external-preview.redd.it/BIxclL-0oN1T34zEimLBRqVrFB2ssklkfQLEN2PPtvc.gif?width=320&amp;crop=smart&amp;s=bce82dbd260b71371003fdf8c0212ab1123a70b5",
+              "width": 320,
+              "height": 179
+            }]
+          },
+          "mp4": {
+            "source": {
+              "url": "https://g.redditmedia.com/BIxclL-0oN1T34zEimLBRqVrFB2ssklkfQLEN2PPtvc.gif?fm=mp4&amp;mp4-fragmented=false&amp;s=ee75cdde60e21e63a4a13a47c0639d6a",
+              "width": 445,
+              "height": 250
+            },
+            "resolutions": [{
+              "url": "https://g.redditmedia.com/BIxclL-0oN1T34zEimLBRqVrFB2ssklkfQLEN2PPtvc.gif?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=108&amp;fm=mp4&amp;mp4-fragmented=false&amp;s=138281c5be990d6910d2838485547d0f",
+              "width": 108,
+              "height": 60
+            }, {
+              "url": "https://g.redditmedia.com/BIxclL-0oN1T34zEimLBRqVrFB2ssklkfQLEN2PPtvc.gif?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=216&amp;fm=mp4&amp;mp4-fragmented=false&amp;s=f03b30bd93659957aabf30ff8b1d097c",
+              "width": 216,
+              "height": 121
+            }, {
+              "url": "https://g.redditmedia.com/BIxclL-0oN1T34zEimLBRqVrFB2ssklkfQLEN2PPtvc.gif?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=320&amp;fm=mp4&amp;mp4-fragmented=false&amp;s=13e42c9b7ea986943f4393a906a2e3a2",
+              "width": 320,
+              "height": 179
+            }]
+          }
+        },
+        "id": "LEcLGuF_hBzZd7qSOplxXiPxP-I5aTvssz8Jzb1G4r8"
       }],
+      "reddit_video_preview": {
+        "fallback_url": "https://v.redd.it/mri9ewrwx0v11/DASH_1_2_M",
+        "height": 360,
+        "width": 638,
+        "scrubber_media_url": "https://v.redd.it/mri9ewrwx0v11/DASH_600_K",
+        "dash_url": "https://v.redd.it/mri9ewrwx0v11/DASHPlaylist.mpd",
+        "duration": 41,
+        "hls_url": "https://v.redd.it/mri9ewrwx0v11/HLSPlaylist.m3u8",
+        "is_gif": true,
+        "transcoding_status": "completed"
+      },
       "enabled": true
     },
     "media_only": false,
@@ -102,32 +183,48 @@
     "can_gild": true,
     "spoiler": false,
     "locked": false,
-    "author_flair_text": null,
+    "author_flair_text": "Photoshop - Gimp",
     "visited": false,
     "num_reports": null,
     "distinguished": null,
-    "subreddit_id": "t5_2qh33",
+    "subreddit_id": "t5_2ylxz",
     "mod_reason_by": null,
     "removal_reason": null,
     "link_flair_background_color": "",
-    "id": "9rjbek",
+    "id": "9s8m6m",
     "is_robot_indexable": true,
     "report_reasons": null,
-    "author": "SwishSwashSwoosh",
-    "num_crossposts": 11,
-    "num_comments": 203,
+    "author": "PonderedNameForDays",
+    "num_crossposts": 1,
+    "num_comments": 98,
     "send_replies": true,
     "whitelist_status": "all_ads",
     "mod_reports": [],
     "author_patreon_flair": false,
-    "author_flair_text_color": null,
-    "permalink": "/r/funny/comments/9rjbek/blue_screen_of_death/",
+    "author_flair_text_color": "dark",
+    "permalink": "/r/HighQualityGifs/comments/9s8m6m/guys_only_want_one_thing/",
     "parent_whitelist_status": "all_ads",
     "stickied": false,
-    "url": "https://i.redd.it/gvq357z64iu11.jpg",
-    "subreddit_subscribers": 21239393,
-    "created_utc": 1540547179,
-    "media": null,
+    "url": "https://gfycat.com/AdoredPleasedAngwantibo",
+    "subreddit_subscribers": 1090480,
+    "created_utc": 1540775126,
+    "media": {
+      "oembed": {
+        "provider_url": "http://gfycat.com",
+        "description": "Watch Final GIF by rooneygifs on Gfycat. Discover more related GIFs on Gfycat",
+        "title": "Final - Create, Discover and Share Awesome GIFs on Gfycat",
+        "type": "video",
+        "thumbnail_width": 445,
+        "height": 337,
+        "width": 600,
+        "html": "&lt;iframe class=\"embedly-embed\" src=\"https://cdn.embedly.com/widgets/media.html?src=https%3A%2F%2Fgfycat.com%2Fifr%2FAdoredPleasedAngwantibo&amp;url=https%3A%2F%2Fgfycat.com%2Fadoredpleasedangwantibo&amp;image=https%3A%2F%2Fthumbs.gfycat.com%2FAdoredPleasedAngwantibo-size_restricted.gif&amp;key=ed8fa8699ce04833838e66ce79ba05f1&amp;type=text%2Fhtml&amp;schema=gfycat\" width=\"600\" height=\"337\" scrolling=\"no\" frameborder=\"0\" allow=\"autoplay; fullscreen\" allowfullscreen=\"true\"&gt;&lt;/iframe&gt;",
+        "version": "1.0",
+        "provider_name": "gfycat",
+        "thumbnail_url": "https://thumbs.gfycat.com/AdoredPleasedAngwantibo-size_restricted.gif",
+        "thumbnail_height": 250
+      },
+      "type": "gfycat.com"
+    },
     "is_video": false
   }
 }

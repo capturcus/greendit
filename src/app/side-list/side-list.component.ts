@@ -91,4 +91,8 @@ export class SideListComponent implements OnInit {
       this.stepPost(1);
     }
   }
+
+  dumpPost(post) {
+    console.log("DUMP POST", post);
+  }
 }

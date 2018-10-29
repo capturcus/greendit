@@ -55,6 +55,14 @@ export class MainViewComponent implements OnInit {
       }
       return true;
     }
+    if (this.post.data.domain === "gfycat.com") {
+      if (this.post.data.url.startsWith("https://giant.gfycat.com/")) {
+        return true;
+      }
+      let id = this.post.data.url.split("/").slice(-1);
+      this.post.data.url = "https://giant.gfycat.com/"+id+".webm";
+      return true;
+    }
     for (var ext of VIDEO_EXTENSIONS) {
       if (this.post.data.url.endsWith(ext)) {
         return true;
@@ -78,6 +86,9 @@ export class MainViewComponent implements OnInit {
   }
 
   getVideoType() {
+    if (this.post.data.domain === "gfycat.com") {
+      return "video/webm";
+    }
     // if (post.data.domain === "i.imgur.com") {
       return "video/mp4";
     // }

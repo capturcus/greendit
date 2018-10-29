@@ -10,6 +10,6 @@
         <span class="title">{{post.data.title}}</span>
       </div>
     </div>
-    <img *ngIf="post.data.thumbnail !== 'self'" src={{getThumbnailUrl(post)}} />
+    <img *ngIf="post.data.thumbnail !== 'self'" src={{getThumbnailUrl(post)}} (click)="dumpPost(post)" />
   </div>
 </div>

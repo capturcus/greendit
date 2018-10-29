@@ -6,7 +6,7 @@ import {
   HttpInterceptor, HttpErrorResponse
 } from '@angular/common/http';
 import { Observable, of, observable } from 'rxjs';
-import { catchError, switchMap } from "rxjs/internal/operators";
+import { catchError, switchMap, take } from "rxjs/internal/operators";
 import { RedditService } from './reddit.service';
 
 @Injectable()

@@ -27,14 +27,6 @@ export class SideListComponent implements OnInit {
       })
   }
 
-  formatScore(score) {
-    let s = Number(score);
-    if (s >= 10000) {
-      return (s / 1000).toFixed(1) + "k";
-    }
-    return score;
-  }
-
   getThumbnailUrl(post) {
     if (post.data.thumbnail === "image") {
       return post.data.url;

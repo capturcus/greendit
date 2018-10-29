@@ -5,7 +5,7 @@
       <span class="subname">{{post.data.subreddit_name_prefixed}}</span>
       <div class="container2">
         <div [ngStyle]="{'background': this.utils.upvoteToColor(post.data.ups)}">
-          <span class="points">{{formatScore(post.data.ups)}}</span>
+          <span class="points">{{this.utils.formatScore(post.data.ups)}}</span>
         </div>
         <span class="title">{{post.data.title}}</span>
       </div>

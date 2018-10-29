@@ -9,7 +9,7 @@ import { GoogleService } from '../google.service';
 })
 export class SiteHeaderComponent implements OnInit {
 
-  post = {data:{}};
+  post: any = {data:{}};
 
   constructor(
     private reddit: RedditService,

@@ -10,12 +10,16 @@
     margin-bottom: 3vh;
 }
 
-.title {
+.titlecontainer {
     margin-left: 5vw;
     margin-top: 3vh;
     margin-bottom: 3vh;
-    font-size: 14pt;
     max-width: 40vw;
+}
+
+.title {
+    margin-left: 1vw;
+    font-size: 14pt;
 }
 
 .link {

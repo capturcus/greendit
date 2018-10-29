@@ -39,4 +39,12 @@ export class UtilsService {
     }
     return `rgb(${colors.r}, ${colors.g}, ${colors.b}, 1)`;
   }
+
+  formatScore(score) {
+    let s = Number(score);
+    if (s >= 10000) {
+      return (s / 1000).toFixed(1) + "k";
+    }
+    return score;
+  }
 }

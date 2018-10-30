@@ -43,3 +43,7 @@
 .mainimage {
     align-self: flex-start;
 }
+
+.comments {
+    margin-left: 3vw;
+}

@@ -1,0 +1,13 @@
+.children {
+    margin-left: 2vw;
+}
+
+.commentcontainer {
+    margin-top: 1vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.author {
+    margin-left: 1vw;
+}

@@ -16,3 +16,6 @@
   </video>
   <span *ngIf="post !== undefined && isSelftext() && post.data.selftext !== ''" class="maincontent selftext">{{post.data.selftext}}</span>
 </div>
+<div class="comments">
+<app-comment *ngFor="let c of comments" [comment]="c"></app-comment>
+</div>

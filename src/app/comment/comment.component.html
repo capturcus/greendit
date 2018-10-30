@@ -1,0 +1,12 @@
+<div class="commentcontainer">
+  <div class="header">
+    <span class="points">{{comment.data.score}}</span>
+    <span class="author">{{comment.data.author}}</span>
+  </div>
+  <span class="body">{{comment.data.body}}</span>
+  <div class="children">
+    <ng-template [ngIf]="comment.data.replies !== undefined && comment.data.replies.data !== undefined">
+      <app-comment *ngFor="let c of comment.data.replies.data.children" [comment]="c"></app-comment>
+    </ng-template>
+  </div>
+</div>

@@ -1,5 +1,6 @@
 import { Component, OnInit, Pipe, PipeTransform, ViewChild } from '@angular/core';
 import { UtilsService } from '../utils.service';
+import { RedditService } from '../reddit.service';
 
 const IMG_EXTENSIONS = [".png", ".jpg", ".gif"];
 const VIDEO_EXTENSIONS = [".gifv", ".webm", ".mp4"];
@@ -15,12 +16,14 @@ export class MainViewComponent implements OnInit {
   siemka;
   color = "green";
   post: any = {data:{url:""}};
+  comments: Array<any> = [];
 
   @ViewChild('player')
   private player;
 
   constructor(
-    private utils: UtilsService
+    private utils: UtilsService,
+    private reddit: RedditService
   ) { }
 
   ngOnInit() {
@@ -29,6 +32,9 @@ export class MainViewComponent implements OnInit {
   public setupPost(incomingPost) {
     if (incomingPost !== undefined) {
       this.post = incomingPost;
+      this.reddit.getComments(this.post.data.name.slice(3)).subscribe((data) => {
+        this.comments = data.body[1].data.children;
+      });
     }
   }
 

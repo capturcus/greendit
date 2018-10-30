@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { RedditService } from '../reddit.service';
 import { GoogleService } from '../google.service';
+import { RequestInterceptor } from '../interceptor';
 
 @Component({
   selector: 'app-site-header',
@@ -13,7 +14,8 @@ export class SiteHeaderComponent implements OnInit {
 
   constructor(
     private reddit: RedditService,
-    private google: GoogleService
+    private google: GoogleService,
+    private interceptor: RequestInterceptor
   ) { }
 
   ngOnInit() {}
@@ -26,6 +28,12 @@ export class SiteHeaderComponent implements OnInit {
   }
 
   public setupPost(incomingPost) {
-    this.post = incomingPost;
+    if (incomingPost !== undefined) {
+      this.post = incomingPost;
+    }
+  }
+
+  debugInterceptor() {
+    this.interceptor.releaseTokenQueue();
   }
 }

@@ -51,13 +51,8 @@ export class SideListComponent implements OnInit {
   }
 
   private getMorePosts() {
-    this
-      .reddit
-      .getPosts()
-      .subscribe((data) => {
-        this.posts = this
-          .posts
-          .concat(data.data.children);
+    this.reddit.getPosts().subscribe((data) => {
+        this.posts = this.posts.concat(data.data.children);
       })
   }
 

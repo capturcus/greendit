@@ -5,11 +5,14 @@ import {
   HttpEvent,
   HttpInterceptor, HttpErrorResponse
 } from '@angular/common/http';
-import { Observable, of, observable } from 'rxjs';
+import { Observable, of, observable, timer, Subject } from 'rxjs';
 import { catchError, switchMap, take } from "rxjs/internal/operators";
 import { RedditService } from './reddit.service';
+import { TEST_DATA } from 'src/testdata';
 
-@Injectable()
+@Injectable({
+  providedIn: 'root'
+})
 export class RequestInterceptor implements HttpInterceptor {
 
   constructor(
@@ -38,6 +41,10 @@ export class RequestInterceptor implements HttpInterceptor {
       xhr.setRequestHeader('Content-type', "application/x-www-form-urlencoded");
       xhr.send("grant_type=refresh_token&refresh_token=" + localStorage.getItem("reddit_refresh_token"));
     })
+  }
+
+  public releaseTokenQueue() {
+    console.log("RELEASE TOKEN Q");
   }
 
   intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {

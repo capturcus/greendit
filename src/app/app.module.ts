@@ -17,7 +17,6 @@ import {
   GoogleApiConfig
 } from "ng-gapi";
 import { RequestInterceptor } from './interceptor';
-import { CommentsComponent } from './comments/comments.component';
 
 let gapiClientConfig: NgGapiClientConfig = {
   client_id: "695981349564-qjtc4r23ea566q9mligl4porm3i1c17h.apps.googleusercontent.com",
@@ -33,7 +32,6 @@ let gapiClientConfig: NgGapiClientConfig = {
     SideListComponent,
     SiteHeaderComponent,
     MainViewComponent,
-    CommentsComponent
   ],
   imports: [
     BrowserModule,

@@ -27,7 +27,9 @@ export class MainViewComponent implements OnInit {
   }
 
   public setupPost(incomingPost) {
-    this.post = incomingPost;
+    if (incomingPost !== undefined) {
+      this.post = incomingPost;
+    }
   }
 
   isImage() {

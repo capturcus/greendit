@@ -14,7 +14,7 @@ import { TEST_COMMENTS } from 'src/testcomments';
 const REDIRECT_URI = "http://localhost:4200/callback";
 const BASIC_AUTH = "Basic Wl9BZzNybS1FVWoxX3c6Zm9LVHU0Y3VoV2RKV2dKSXhLN3hON0pBUWlV";
 
-const SERVE_TEST_DATA = false;
+const SERVE_TEST_DATA = true;
 
 @Injectable({providedIn: 'root'})
 export class RedditService {

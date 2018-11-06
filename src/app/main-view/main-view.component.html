@@ -1,6 +1,6 @@
 <div class="maincontainer">
   <!-- <span class="sub">r/{{post.data.subreddit}}</span> -->
-  <div class="titlecontainer">
+  <div class="titlecontainer" #titcont>
       <span [ngStyle]="{'background': this.utils.upvoteToColor(post.data.ups), 'flex-grow': 1}">
           <span class="points">{{this.utils.formatScore(post.data.ups)}}</span>
         </span>

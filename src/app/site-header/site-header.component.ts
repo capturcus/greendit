@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { RedditService } from '../reddit.service';
 import { GoogleService } from '../google.service';
 import { RequestInterceptor } from '../interceptor';
@@ -11,6 +11,9 @@ import { RequestInterceptor } from '../interceptor';
 export class SiteHeaderComponent implements OnInit {
 
   post: any = {data:{}};
+
+  @ViewChild('header')
+  private headerElement;
 
   constructor(
     private reddit: RedditService,
@@ -30,6 +33,7 @@ export class SiteHeaderComponent implements OnInit {
   public setupPost(incomingPost) {
     if (incomingPost !== undefined) {
       this.post = incomingPost;
+      this.headerElement.nativeElement.scrollIntoView();
     }
   }
 

@@ -24,7 +24,12 @@ export class SideListComponent implements OnInit {
     this.reddit.getPosts().subscribe((data) => {
         this.posts = data.data.children;
         this.selectPost(0);
+        this.computeUpvoteMetrics();
       })
+  }
+
+  computeUpvoteMetrics() {
+    this.utils.computeUpvoteMetrics(this.posts.map((x)=>x.data.ups));
   }
 
   getThumbnailUrl(post) {
@@ -53,6 +58,7 @@ export class SideListComponent implements OnInit {
   private getMorePosts() {
     this.reddit.getPosts().subscribe((data) => {
         this.posts = this.posts.concat(data.data.children);
+        this.computeUpvoteMetrics();
       })
   }
 
@@ -64,10 +70,10 @@ export class SideListComponent implements OnInit {
   }
 
   ngAfterViewInit() {
-    this.elementRef.nativeElement.querySelector('#siemka')
+    /*this.elementRef.nativeElement.querySelector('#siemka')
                                   .addEventListener('scroll', () => {
                                     console.log("scroll");
-                                  });
+                                  });*/
    }
 
   ngAfterViewChecked() {

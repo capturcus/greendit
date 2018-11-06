@@ -1,6 +1,8 @@
 <div class="commentcontainer">
   <div class="header">
-    <span class="points">{{comment.data.score}}</span>
+    <span [ngStyle]="{'background': this.utils.upvoteToColor(1), 'points': 1}">
+      {{comment.data.score}}
+    </span>
     <span class="author">{{comment.data.author}}</span>
   </div>
   <span class="body">{{comment.data.body}}</span>

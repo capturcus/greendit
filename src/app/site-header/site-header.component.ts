@@ -2,6 +2,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { RedditService } from '../reddit.service';
 import { GoogleService } from '../google.service';
 import { RequestInterceptor } from '../interceptor';
+import { BUILD_NUM } from '../../../buildnum';
 
 @Component({
   selector: 'app-site-header',
@@ -21,7 +22,9 @@ export class SiteHeaderComponent implements OnInit {
     private interceptor: RequestInterceptor
   ) { }
 
-  ngOnInit() {}
+  ngOnInit() {
+    console.log("BUILD ", BUILD_NUM);
+  }
 
   tryReddit() {
     console.log("logging in to reddit");

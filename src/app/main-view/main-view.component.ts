@@ -35,7 +35,7 @@ export class MainViewComponent implements OnInit {
       if (c.data.ups !== undefined) {
         ups.push(c.data.ups);
       } else {
-        console.log("MORE?", c);
+        // more
       }
       if (c.data.replies !== undefined && c.data.replies.data !== undefined) {
         ups = ups.concat(this._flattenCommentUps(c.data.replies.data.children));

@@ -42,7 +42,6 @@ export class UtilsService {
       max,
       base
     };
-    console.log("COMPUTED METRICS FOR", postName);
 }
 
   public rgbToHsl(r, g, b) {
@@ -183,7 +182,6 @@ export class UtilsService {
     if (u < 0) {
       return "gray";
     }
-    console.log("GETTING COMMENT COLOR", post);
     let m: Metrics = this.commentMetrics[post];
     return this._upvoteToColor(u, m.base, m.max);
   }

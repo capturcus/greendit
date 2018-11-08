@@ -147,7 +147,7 @@ export class RedditService {
   }
 
   public login() : boolean {
-    if(localStorage.getItem("reddit_access_token") !== null) {
+    if(localStorage.getItem("reddit_access_token") !== null || SERVE_TEST_DATA) {
       return true;
     }
     let redditCo2 = new co2({

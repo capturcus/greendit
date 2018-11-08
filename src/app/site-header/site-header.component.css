@@ -21,3 +21,9 @@ h1 {
     margin-left: 1vw;
     padding: 0;
 }
+
+.build {
+    font-size: 6pt;
+    margin-right: 1vw;
+    color: grey;
+}

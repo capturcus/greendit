@@ -12,6 +12,7 @@ import { BUILD_NUM } from '../../../buildnum';
 export class SiteHeaderComponent implements OnInit {
 
   post: any = {data:{}};
+  build: number = 0;
 
   @ViewChild('header')
   private headerElement;
@@ -24,6 +25,7 @@ export class SiteHeaderComponent implements OnInit {
 
   ngOnInit() {
     console.log("BUILD ", BUILD_NUM);
+    this.build = BUILD_NUM;
   }
 
   tryReddit() {

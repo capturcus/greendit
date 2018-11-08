@@ -22,7 +22,7 @@ export class MainViewComponent implements OnInit {
   private player;
 
   constructor(
-    private utils: UtilsService,
+    public utils: UtilsService,
     private reddit: RedditService
   ) { }
 

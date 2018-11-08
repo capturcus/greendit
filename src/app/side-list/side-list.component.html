@@ -3,7 +3,7 @@
 " (click)="selectPost(index)">
     <div class="textcontainer">
       <span class="subname">{{post.data.subreddit_name_prefixed}}</span>
-      <div class="container2">
+      <div class="titleandpoints">
         <div [ngStyle]="{'background': this.utils.upvoteToColor(post.data.ups)}">
           <span class="points">{{this.utils.formatScore(post.data.ups)}}</span>
         </div>

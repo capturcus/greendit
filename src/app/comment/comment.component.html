@@ -1,14 +1,14 @@
-<div class="commentcontainer">
+<div *ngIf="comment.kind !== 'more'" class="commentcontainer">
   <div class="header">
-    <span [ngStyle]="{'background': this.utils.upvoteToColor(1), 'points': 1}">
+    <span [ngStyle]="{'background': this.utils.upvoteToColorComment(comment.data.ups, postName)}">
       {{comment.data.score}}
+      <span class="author">{{comment.data.author}}</span>
     </span>
-    <span class="author">{{comment.data.author}}</span>
   </div>
   <span class="body">{{comment.data.body}}</span>
   <div class="children">
     <ng-template [ngIf]="comment.data.replies !== undefined && comment.data.replies.data !== undefined">
-      <app-comment *ngFor="let c of comment.data.replies.data.children" [comment]="c"></app-comment>
+      <app-comment *ngFor="let c of comment.data.replies.data.children" [comment]="c" [postName]="postName"></app-comment>
     </ng-template>
   </div>
 </div>

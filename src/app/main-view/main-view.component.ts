@@ -29,11 +29,28 @@ export class MainViewComponent implements OnInit {
   ngOnInit() {
   }
 
+  private _flattenCommentUps(comments) {
+    let ups = [];
+    for (let c of comments) {
+      if (c.data.ups !== undefined) {
+        ups.push(c.data.ups);
+      } else {
+        console.log("MORE?", c);
+      }
+      if (c.data.replies !== undefined && c.data.replies.data !== undefined) {
+        ups = ups.concat(this._flattenCommentUps(c.data.replies.data.children));
+      }
+    }
+    return ups;
+  }
+
   public setupPost(incomingPost) {
     if (incomingPost !== undefined) {
       this.post = incomingPost;
       this.reddit.getComments(this.post.data.name.slice(3)).subscribe((data) => {
         this.comments = data.body[1].data.children;
+        let comUps = this._flattenCommentUps(this.comments);
+        this.utils.computeUpvoteMetricsComments(this.post.data.name, comUps);
       });
     }
   }

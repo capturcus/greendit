@@ -8,20 +8,42 @@ const NEUTRAL = {
 
 const DESATURATION_AMOUNT = 0.1;
 
+class Metrics {
+  public median: number = 0;
+  public max: number = 0;
+  public base: number = 0;
+}
+
 @Injectable({providedIn: 'root'})
 export class UtilsService {
 
   constructor() {}
 
-  public median : number = 0;
-  public max : number = 0;
-  public base : number = 0;
+  public postMetrics: Metrics = new Metrics();
+
+  public commentMetrics: {[key: string]: Metrics} = {};
 
   public computeUpvoteMetrics(upvotes : Array < number >) {
-    this.median = this.computeMedian(upvotes);
-    this.max = upvotes.sort((a, b) => a - b).slice(-1)[0];
-    this.base = Math.pow(this.median / this.max, 2);
+    this.postMetrics.median = this.computeMedian(upvotes);
+    this.postMetrics.max = upvotes.sort((a, b) => a - b).slice(-1)[0];
+    this.postMetrics.base = Math.pow(this.postMetrics.median / this.postMetrics.max, 2);
   }
+
+  public computeUpvoteMetricsComments(postName: string, upvotes : Array < number >) {
+    if (this.commentMetrics[postName] !== undefined) {
+      // metrics already known
+      return;
+    }
+    let median = this.computeMedian(upvotes);
+    let max = upvotes.sort((a, b) => a - b).slice(-1)[0];
+    let base = Math.pow(median / max, 2);
+    this.commentMetrics[postName] = {
+      median,
+      max,
+      base
+    };
+    console.log("COMPUTED METRICS FOR", postName);
+}
 
   public rgbToHsl(r, g, b) {
     r /= 255, g /= 255, b /= 255;
@@ -75,23 +97,6 @@ export class UtilsService {
 
   public lerp(min, max, amount) {
     return min+(max-min)*amount;
-  }
-
-  public interpolateColors(a, b, amount) {
-    return {
-      r: this.lerp(a.r, b.r, amount),
-      g: this.lerp(a.g, b.g, amount),
-      b: this.lerp(a.b, b.b, amount)
-    }
-  }
-
-  public toGrayscale(c) {
-    let lightness = c.r * NEUTRAL.r + c.g * NEUTRAL.g + c.b * NEUTRAL.b;
-    return {
-      r: lightness,
-      g: lightness,
-      b: lightness
-    }
   }
 
   public desaturate(c) {
@@ -160,28 +165,27 @@ export class UtilsService {
     return {r: 255, g: 0, b: 0}
   }
 
-  /*public computeCurveFactors(median : number, max : number) : Array < number > {
-    let c1 = max*max;
-    let c2 = max;
-    let c3 = median*median;
-    let c4 = median;
-    let b = (0.5 * c1 - c3) / (c4 * c1 - c2 * c3);
-    let a = (1 - b * c2) / c1;
-    return [a, b];
-  }*/
-
-  public upvoteToColor(u) {
-    /*let colors;
-    if (u < max) {
-      let scaledX = a * u * u + b * u;
-      colors = this.colorLerp(1, scaledX);
-    } else {
-      colors = this.colorLerp(1, 1);
-    }*/
-    let scaled = 1 - Math.pow(this.base, u / this.max);
+  private _upvoteToColor(u, base, max) {
+    let scaled = 1 - Math.pow(base, u / max);
     let colors = this.colorLerp(1, scaled);
     colors = this.desaturate(colors);
     return `rgb(${colors.r}, ${colors.g}, ${colors.b}, 1)`;
+  }
+
+  public upvoteToColor(u) {
+    return this._upvoteToColor(u, this.postMetrics.base, this.postMetrics.max);
+  }
+
+  public upvoteToColorComment(u, post) {
+    if (post === undefined) {
+      return "rgb(0,0,0,1)";
+    }
+    if (u < 0) {
+      return "gray";
+    }
+    console.log("GETTING COMMENT COLOR", post);
+    let m: Metrics = this.commentMetrics[post];
+    return this._upvoteToColor(u, m.base, m.max);
   }
 
   formatScore(score) {

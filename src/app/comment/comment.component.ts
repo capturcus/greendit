@@ -11,6 +11,9 @@ export class CommentComponent implements OnInit {
   @Input()
   comment: any;
 
+  @Input()
+  postName: string;
+
   constructor(
     private utils: UtilsService
   ) { }
@@ -20,5 +23,4 @@ export class CommentComponent implements OnInit {
       console.log(this.comment.data.replies.data.children);
     }*/
   }
-
 }

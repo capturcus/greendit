@@ -20,5 +20,5 @@
   </div>
 </div>
 <div class="comments">
-<app-comment *ngFor="let c of comments" [comment]="c"></app-comment>
+<app-comment *ngFor="let c of comments" [comment]="c" [postName]="post.data.name"></app-comment>
 </div>

@@ -11,7 +11,8 @@ import { TEST_COMMENTS } from 'src/testcomments';
 // http://localhost:4200/callback?state=12c0ef1f-1c86-4321-8ee0-249585ff5ae9&cod
 // e=REZUZJ52vHaPyKnmZZa0--4NcMI
 
-const REDIRECT_URI = "http://localhost:4200/callback";
+// const REDIRECT_URI = "http://localhost:4200/callback";
+const REDIRECT_URI = "https://capturcus.github.io/callback";
 const BASIC_AUTH = "Basic Wl9BZzNybS1FVWoxX3c6Zm9LVHU0Y3VoV2RKV2dKSXhLN3hON0pBUWlV";
 
 const SERVE_TEST_DATA = false;

@@ -1,12 +1,15 @@
-.sidenav {
-    height: 100%;
+.sidenavcontainer {
+    height: 100vh;
     width: 25vw;
     position: fixed;
     z-index: 1;
     left: 0;
     display: flex;
+}
+
+.sidenav {
+    display: flex;
     flex-direction: column;
-    /* background: #eff7ed; */
     overflow-y: scroll;
 }
 
@@ -14,6 +17,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    flex-shrink: 0;
 }
 
 .even {
@@ -40,7 +44,6 @@ img {
 }
 
 .titleandpoints {
-    height: 100%;
     display: flex;
     align-items: center;
     width: 20vw;

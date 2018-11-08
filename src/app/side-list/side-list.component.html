@@ -1,3 +1,4 @@
+<div class="sidenavcontainer">
 <div class="sidenav" id="siemka">
   <div *ngFor="let post of posts; let index=index; let odd=odd; let even=even;" class="row" [ngClass]="{ odd: odd, even: even, selected: index===selectedPost }
 " (click)="selectPost(index)">
@@ -12,4 +13,5 @@
     </div>
     <img *ngIf="post.data.thumbnail !== 'self'" src={{getThumbnailUrl(post)}} (click)="dumpPost(post)" />
   </div>
+</div>
 </div>

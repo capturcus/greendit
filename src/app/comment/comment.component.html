@@ -1,7 +1,7 @@
 <div *ngIf="comment.kind !== 'more'" class="commentcontainer">
   <div class="header">
     <span [ngStyle]="{'background': this.utils.upvoteToColorComment(comment.data.ups, postName)}">
-      {{comment.data.score}}
+      <span class="points">{{comment.data.score}}</span>
       <span class="author">{{comment.data.author}}</span>
     </span>
   </div>

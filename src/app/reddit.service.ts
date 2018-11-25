@@ -95,7 +95,7 @@ export class RedditService {
   }
 
   init() {
-    if (window.location.href.includes("/callback?")) {
+    if (window.location.href.includes("/?state=")) {
       let postLink = "https://www.reddit.com/api/v1/access_token";
 
       let urlValues = this.getJsonFromUrl();

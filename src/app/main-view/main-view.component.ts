@@ -1,4 +1,4 @@
-import { Component, OnInit, Pipe, PipeTransform, ViewChild } from '@angular/core';
+import { Component, OnInit, Pipe, PipeTransform, ViewChild, HostListener } from '@angular/core';
 import { UtilsService } from '../utils.service';
 import { RedditService } from '../reddit.service';
 
@@ -47,10 +47,12 @@ export class MainViewComponent implements OnInit {
   public setupPost(incomingPost) {
     if (incomingPost !== undefined) {
       this.post = incomingPost;
+      this.comments = [];
       this.reddit.getComments(this.post.data.name.slice(3)).subscribe((data) => {
-        this.comments = data.body[1].data.children;
-        let comUps = this._flattenCommentUps(this.comments);
+        let tempComments = data.body[1].data.children
+        let comUps = this._flattenCommentUps(tempComments);
         this.utils.computeUpvoteMetricsComments(this.post.data.name, comUps);
+        this.comments = tempComments;
       });
     }
   }
@@ -131,6 +133,19 @@ export class MainViewComponent implements OnInit {
 
   titleClick() {
     if (this.isLink()) {
+      window.open(this.post.data.url,'_blank');
+    }
+  }
+
+  arrowClick(direction) {
+    var e = new KeyboardEvent("keydown", {bubbles : true, cancelable : true, key : direction});
+    document.dispatchEvent(e);
+  }
+  
+  @HostListener('window:keydown', ['$event'])
+  onKeyDown(event) {
+    if (event.key === " " && this.isLink()) {
+      event.preventDefault();
       window.open(this.post.data.url,'_blank');
     }
   }

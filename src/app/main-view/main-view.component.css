@@ -51,3 +51,40 @@
 .contentfooter {
     margin-left: 5vw;
 }
+
+.leftbutton {
+    width: 10vh;
+    height: 10vh;
+    background: #e266ff;
+    border-radius: 0 10vh 0 0;
+    -moz-border-radius: 0 10vh 0 0;
+    -webkit-border-radius: 0 10vh 0 0;
+
+    position: fixed;
+    bottom: 0;
+}
+
+.rightbutton{
+    width: 10vh;
+    height: 10vh;
+    background: #e266ff;
+    border-radius: 10vh 0 0 0;
+    -moz-border-radius: 10vh 0 0 0;
+    -webkit-border-radius: 10vh 0 0 0;
+
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
+
+.arrowcontainer {
+    text-align: center;
+    vertical-align: text-bottom;
+}
+
+.arrow {
+    margin-top: 2vh;
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 30pt;
+}

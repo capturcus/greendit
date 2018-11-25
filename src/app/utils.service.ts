@@ -183,6 +183,9 @@ export class UtilsService {
       return "gray";
     }
     let m: Metrics = this.commentMetrics[post];
+    if (m === undefined) {
+      return "rgb(1,1,1,1)";
+    }
     return this._upvoteToColor(u, m.base, m.max);
   }
 

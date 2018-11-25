@@ -19,6 +19,8 @@
     <span>{{post.data.author}}</span>
   </div>
 </div>
+<div class="leftbutton arrowcontainer" (click)="arrowClick('ArrowLeft')"><span class="arrow">⇐</span></div>
+<div class="rightbutton arrowcontainer" (click)="arrowClick('ArrowRight')"><span class="arrow">⇒</span></div>
 <div class="comments">
 <app-comment *ngFor="let c of comments" [comment]="c" [postName]="post.data.name"></app-comment>
 </div>

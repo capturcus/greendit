@@ -144,7 +144,7 @@ export class MainViewComponent implements OnInit {
   
   @HostListener('window:keydown', ['$event'])
   onKeyDown(event) {
-    if (event.key === " " && this.isLink()) {
+    if (event.key === " ") {
       event.preventDefault();
       window.open(this.post.data.url,'_blank');
     }

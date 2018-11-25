@@ -11,7 +11,7 @@ import { TEST_COMMENTS } from 'src/testcomments';
 // http://localhost:4200/callback?state=12c0ef1f-1c86-4321-8ee0-249585ff5ae9&cod
 // e=REZUZJ52vHaPyKnmZZa0--4NcMI
 
-const HOME_URI = "https://capturcus.github.io/greendit";
+const HOME_URI = "https://capturcus.github.io/greendit/";
 // const HOME_URI = "http://localhost:4200/";
 const REDIRECT_URI = HOME_URI;
 const BASIC_AUTH = "Basic Wl9BZzNybS1FVWoxX3c6Zm9LVHU0Y3VoV2RKV2dKSXhLN3hON0pBUWlV";
@@ -95,7 +95,7 @@ export class RedditService {
   }
 
   init() {
-    if (window.location.href.includes("?state=")) {
+    if (window.location.href.includes("/?state=")) {
       let postLink = "https://www.reddit.com/api/v1/access_token";
 
       let urlValues = this.getJsonFromUrl();

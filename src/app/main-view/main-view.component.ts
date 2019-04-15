@@ -13,10 +13,10 @@ const VIDEO_EXTENSIONS = [".gifv", ".webm", ".mp4"];
 export class MainViewComponent implements OnInit {
 
   slider: number;
-  siemka;
   color = "green";
   post: any = {data:{url:""}};
   comments: Array<any> = [];
+  videoLoaded = false;
 
   @ViewChild('player')
   private player;
@@ -54,6 +54,7 @@ export class MainViewComponent implements OnInit {
         this.utils.computeUpvoteMetricsComments(this.post.data.name, comUps);
         this.comments = tempComments;
       });
+      this.videoLoaded = false;
     }
   }
 
@@ -122,8 +123,9 @@ export class MainViewComponent implements OnInit {
   }
 
   ngAfterViewChecked() {
-    if (this.post !== undefined && this.isVideo()) {
+    if (this.post !== undefined && this.isVideo() && !this.videoLoaded) {
       this.player.nativeElement.load();
+      this.videoLoaded = true;
     }
   }
 

@@ -27,7 +27,7 @@ export class AppComponent {
   ) { }
 
   ngOnInit() {
-    this.reddit.init();
+    // this.reddit.init();
 
     this.sideList.clickedPostSubject.subscribe((post) => {
       this.mainView.setupPost(post);

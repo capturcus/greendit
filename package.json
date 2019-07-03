@@ -22,7 +22,7 @@
     "@angular/router": "^6.1.0",
     "client-oauth2": "^4.2.1",
     "core-js": "^2.5.4",
-    "ng-gapi": "0.0.6",
+    "ng-gapi": "0.0.73",
     "node": "^11.0.0",
     "npm": "^6.4.1",
     "rxjs": "^6.0.0",

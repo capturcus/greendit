@@ -143,9 +143,6 @@ export class RedditService {
           })
       }
     }
-    this
-      .google
-      .signInIfNecessary();
   }
 
   public login() : boolean {

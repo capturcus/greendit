@@ -29,10 +29,8 @@ export class SiteHeaderComponent implements OnInit {
   }
 
   tryReddit() {
-    console.log("logging in to reddit");
-    if(this.reddit.login()) {
-      this.google.signInIfNecessary();
-    }
+    console.log("logging in to google");
+    this.google.signIn();
   }
 
   public setupPost(incomingPost) {
